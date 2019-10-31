@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.global{
+    background-color: #f5fffa;
+    width: 1000px;
+    position: absolute;
+    /*height: 600px;*/
+    top: 11%;
+    left:18%;
+    /*overflow: hidden;*/
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.4);
+}
+.player2,
+.player1 {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+.active { background-color: #58f1f1; }
+.active .player-name { font-weight: 300; }
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 9px;
+}
+.player-name{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.player-score{
+    text-align: center;
+    font-size: 60px;
+    /*font-weight: 100;*/
+    color: #EB4D4D;
+    margin-bottom: 135px;
+}
+.player-current{
+    background-color: #EB4D4D;
+    margin: 0 auto;
+    width: 38%;
+    padding: 12px;
+    text-align: center;
+    color: #f5fffa;/*#fff;*/
+}
+.current-label{
+    /*text-transform: uppercase*/
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222; 
+}
+.current-score{
+    font-size: 30px;
+}
+button{
+    text-transform: uppercase;
+    position: absolute;
+    border: none;
+    font-size: 20px;
+    background: none;
+    color: #555;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Lato;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover { font-weight: 800; }/* l'écriture vas grandir */
+/*button:hover i { margin-top: 10px; }*/
+button:focus {
+    outline: none;
+}
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    transition: margin 0.3s;
+}
+.btn-new{
+    top: 45px;
+}
+.btn-rollDice{
+    top: 400px;
+}
+.btn-hold{
+    top: 460px;
+}
+.dice{
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    height: 100px;
+    width: 100px;
+    transform: translateX(-50%);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+.winner { background-color: #58f1f1; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+    top: 490px;
+    padding: 13px;
+    color: #222;
+    width: 150px;
+    font-family: 'Lato';
+    font-size: 12px;/*16px*/
+    margin: 30px;
+    text-align: center;
+    text-transform: inherit;
+}
+.final-score:focus {
+    outline: none;
+}
+.copy{
+    /*margin: 0;
+    padding-right: 20px;
+    */
+    color: #222;
+	background-color: #EB4D4D;
+	position: relative;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: right;
+    padding-right: 20px;
+	display: inline-block;
+	width: 100%;
+}
+@media (max-width: 880px) {
+    .global{
+        top: 0%;
+        left: 0%;
+    }
+	.global .player1,
+	.global .player2{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+	}
+	.global button i{
+	    margin-left: 0;
+    }
+    button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
